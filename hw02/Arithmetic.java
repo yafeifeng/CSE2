@@ -1,4 +1,8 @@
 //////////////////////////////////////
+//Feng Yafei
+//September 10 2014
+//cse 02 hw02
+//calculate the cost of purchases at a Walmart in PA
 public class Arithmetic {
     public static void main(String[] args){
         //numbers of pairs of socks
@@ -16,6 +20,7 @@ public class Arithmetic {
         int nEnvolopes=1;
         //cost per box of envolopes
         double envolopeCost$=3.25;
+        //ratio of tax
         double taxPercent=0.06;
         
         //what are you calculating?
