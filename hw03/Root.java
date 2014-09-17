@@ -19,7 +19,7 @@ public class Root{
         double guess1=(cube/3);
         
         //the second guess 
-        double guess2=(2*guess1*guess1*guess1+cube)/(3*guess1*guess1);//IG1=improved guess 1
+        double guess2=(2*guess1*guess1*guess1+cube)/(3*guess1*guess1);
         //the third guess
         double guess3=(2*guess2*guess2*guess2+cube)/(3*guess2*guess2);
         //the fourth guess
