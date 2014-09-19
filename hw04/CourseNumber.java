@@ -6,7 +6,7 @@
 
 import java.util.Scanner;
 public class CourseNumber{//public class
-    public static void main(String [] args){//public class
+    public static void main(String [] args){//public method
         Scanner myScanner;
         myScanner=new Scanner(System.in);
         
