@@ -35,7 +35,7 @@ public class LoopTheLoop{
             System.out.print("Enter y or Y to go again-");
             String letter=input.next();
             char l=letter.charAt(0);
-            if(l=='Y'||l=='y'){
+            while(l=='Y'||l=='y'){
                 System.out.print("Enter an int between 1 and 15-");
                 int number2=input.nextInt();
                 nStars=1;
@@ -54,12 +54,11 @@ public class LoopTheLoop{
                     }
                     System.out.print("\n");
                     nStars++;
+                    
                 }
+                
             }
-            else{
-                return;
             }
-        }
         else{
         return;}
     }
