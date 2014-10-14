@@ -2,6 +2,7 @@
 //Yafei Feng
 //Oct.10
 //hw06
+//the Roulette game
 
 import java.util.Scanner;
 public class Roulette{
@@ -14,19 +15,19 @@ public class Roulette{
         int result=0;
         int another=0;
         int bonus=0;
-        while(frequency<100000){
+        while(frequency<100000){//start of loop
             //while(spin<100){
             if((int)(Math.random()*37)==number){//first condition
                 result++;
             }
-        else{
+        else{//second condition
           another++;  
         
         }
         //spin++;
             //}   
         frequency++;
-        }
+        }//end of  while loop
 
         bonus=result*36;
         if(result>=3){
