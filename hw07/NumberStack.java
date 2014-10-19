@@ -71,6 +71,42 @@ public class NumberStack{
         System.out.println();
             n++;
         }
+        int z=0;
+        do{
+            z++;
+            System.out.println();
+            int f=0;
+            do{
+                f++;
+                int g=0;
+                do{
+                    g++;
+                    System.out.print(" ");
+                }
+                while(g<9-z);
+                int i=0;
+                do{
+                    i++;
+                    System.out.print(z);
+                }
+                while(i<(2*z-1));
+                System.out.println();
+            }
+            while(f<z);
+            int g=0;
+            do{
+                g++;
+                System.out.print(" ");
+            }
+            while(g<9-z);
+            int h=0;
+            do{
+                h++;
+                System.out.print("-");
+            }
+            while(h<(2*z-1));
+        }
+        while(z<number);
             }
             }
         else{
