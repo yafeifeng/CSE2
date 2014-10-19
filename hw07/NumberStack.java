@@ -42,6 +42,35 @@ public class NumberStack{
                     System.out.println();
                     
             }
+            int n=1;
+        while(n<=number){
+            int a=0;
+            while(a<n){
+                int b=0;
+                while(b<9-n){
+                    System.out.print(" ");
+                    b++;}
+                    int c=0;
+                    while(c<(2*n-1)){
+                        System.out.print(n);
+                        c++;
+                    }
+                    System.out.println();
+                a++;
+            }
+        int d=0;
+        while(d<9-n){
+            System.out.print(" ");
+            d++;
+        }
+        int e=0;
+        while(e<(2*n-1)){
+            System.out.print("-");
+            e++;
+        }
+        System.out.println();
+            n++;
+        }
             }
             }
         else{
