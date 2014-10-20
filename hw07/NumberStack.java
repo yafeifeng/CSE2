@@ -13,13 +13,13 @@ public class NumberStack{
         System.out.print("Enter a number between 1-9-");
         
         
-        if(input.hasNextInt()){
+        if(input.hasNextInt()){//begin of the if
             int number=input.nextInt();
             if(number>9||number<1){
                 System.out.println("Your input is off the range");
             }
             else{
-                for(int n=1;n<=number;n++){
+                for(int n=1;n<=number;n++){//begin of the for loop
                     for(int j=0;j<n;j++){
                         
                     
@@ -41,8 +41,8 @@ public class NumberStack{
                     }
                     System.out.println();
                     
-            }
-            int n=1;
+            }//end of the for loop
+            int n=1;//begin of the while loop
         while(n<=number){
             int a=0;
             while(a<n){
@@ -70,8 +70,8 @@ public class NumberStack{
         }
         System.out.println();
             n++;
-        }
-        int z=0;
+        }//end of the while loop
+        int z=0;//begin of the do while loop
         do{
             z++;
             System.out.println();
@@ -83,7 +83,7 @@ public class NumberStack{
                     g++;
                     System.out.print(" ");
                 }
-                while(g<9-z);
+                while(g<=9-z);
                 int i=0;
                 do{
                     i++;
@@ -98,7 +98,7 @@ public class NumberStack{
                 g++;
                 System.out.print(" ");
             }
-            while(g<9-z);
+            while(g<=9-z);
             int h=0;
             do{
                 h++;
@@ -106,14 +106,14 @@ public class NumberStack{
             }
             while(h<(2*z-1));
         }
-        while(z<number);
+        while(z<number);//end of the do while loop
             }
-            }
+            }//end of if 
         else{
             System.out.println("Bad input");
         }
 
             
         
-    }
-}
+    }//end of method
+}//end of class
