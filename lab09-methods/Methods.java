@@ -13,25 +13,25 @@ public class Methods{
         System.out.println("Enter three int");
         
         
-         System.out.print("Enter an int-");
+         //System.out.print("Enter an int-");
          
           
-           if(scan.hasNextInt()){
+          // if(scan.hasNextInt()){
                a=getInt(scan); 
-           System.out.print("Enter an int-");
+           //System.out.print("Enter an int-");
 	        
 	         b=getInt(scan);
-	       System.out.print("Enter an int-");
+	      // System.out.print("Enter an int-");
 	         c=getInt(scan);
-           }
+          // }
            
-           else{
+          // else{
                
-               System.out.print("You did not enter an int;try again-");
+          //     System.out.print("You did not enter an int;try again-");
                
           
-               return;
-           }
+              
+         //  }
           
 	    
         
@@ -51,13 +51,26 @@ public class Methods{
   }	
 	public static int getInt(Scanner scan){
 	    
-	    //if(scan.hasNextInt()){
-	    int x=scan.nextInt();
-	    return x;
-	    //}
-	    //else{
-	   // System.out.println("You did not enter an int, try again-");
-	    //}
+	    int x;
+	    //int n=0;
+	   // while(n<3){
+	    System.out.print("Enter an int- ");    
+	    if(scan.hasNextInt()){
+	    
+	    
+	   x=scan.nextInt();
+	    //n++;
+	    }
+	    else{
+        while(!scan.hasNextInt()){
+    	scan.next(); //get rid of the junk entered by user
+    	System.out.print("You did not enter an int; try again- ");
+    }
+    x=scan.nextInt();
+    }
+    
+	    
+    return x;
 	    
 	}
 	    
