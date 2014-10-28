@@ -2,7 +2,7 @@
 //Yafei Feng
 //cse 2
 //hw 08
-//methods
+//overload the method getInput
 
 import java.util.Scanner;
 public class HW8{
@@ -32,7 +32,7 @@ public class HW8{
            x=x2.charAt(0);
            if(x2.length()==1){
       if(x=='C'||x=='c'){
-          //System.out.println("You entered '"+x2+"'");
+          
           break;//leave the loop
       }
       else{
@@ -63,7 +63,7 @@ public class HW8{
       }
       
       return x;
-  }//end of method 1
+  }//end of method getInput for the first time
   public static char getInput(Scanner scan,String d,int number){
     String x3=scan.next();
     char x4=x3.charAt(0);
@@ -84,7 +84,7 @@ public class HW8{
     System.out.println("You failed after 5 tries");
   }
   return x4;
-}//end of method 2
+}//end of method getInput for the second time
  public static char getInput(Scanner scan, String z,String y){
    String first="a";
    char result=' ';
@@ -92,7 +92,7 @@ public class HW8{
    while(first.length()==1){
    System.out.println("Choose a digit.");
      System.out.print("Enter one of: '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'- ");
-   if(scan.hasNext()){
+   
      String x5=scan.next();
       char x6=x5.charAt(0);
      
@@ -100,7 +100,7 @@ public class HW8{
        
        first="ab";
        result=x6;
-       //System.out.println("You entered '"+result+"'");
+       
        break;
      }
       if(x5.length()>1){
@@ -111,10 +111,10 @@ public class HW8{
        System.out.println("You did not enter an acceptable character");
        first="a";
      }
-   }
+  
    first="a";
    }
    return result;
- }//end of method 3
+ }//end of method getInput for the third time
 
 }//end of class
