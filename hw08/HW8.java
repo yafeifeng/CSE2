@@ -17,11 +17,10 @@ public class HW8{
 	if(input!=' '){
    	System.out.println("You entered '"+input+"'");
 	}
-  System.out.println("Choose a digit");
-  System.out.print("Enter one of: '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'- ");
+  
   
   input=getInput(scan,"Choose a digit.","0123456789");//call method getInt for the third time
-	//System.out.println("You entered '"+input+"'"); 
+	System.out.println("You entered '"+input+"'"); 
   }
   public static char getInput(Scanner scan,String c){
       String x2=" ";
@@ -64,7 +63,7 @@ public class HW8{
       }
       
       return x;
-  }
+  }//end of method 1
   public static char getInput(Scanner scan,String d,int number){
     String x3=scan.next();
     char x4=x3.charAt(0);
@@ -85,28 +84,37 @@ public class HW8{
     System.out.println("You failed after 5 tries");
   }
   return x4;
-}
+}//end of method 2
  public static char getInput(Scanner scan, String z,String y){
+   String first="a";
    char result=' ';
+   
+   while(first.length()==1){
+   System.out.println("Choose a digit.");
+     System.out.print("Enter one of: '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'- ");
    if(scan.hasNext()){
      String x5=scan.next();
-     char x6=x5.charAt(0);
+      char x6=x5.charAt(0);
+     
      if(x6=='0'||x6=='1'||x6=='2'||x6=='3'||x6=='4'||x6=='5'||x6=='6'||x6=='7'||x6=='8'||x6=='9'){
        
-       
+       first="ab";
        result=x6;
-       System.out.println("You entered '"+result+"'");
+       //System.out.println("You entered '"+result+"'");
+       break;
      }
-     else if(x5.length()>1){
+      if(x5.length()>1){
        System.out.println("Enter exactly one character");
-       //return;
+       first="a";
      }
      else{
        System.out.println("You did not enter an acceptable character");
-       //return;
+       first="a";
      }
    }
+   first="a";
+   }
    return result;
- }
+ }//end of method 3
 
-}
+}//end of class
