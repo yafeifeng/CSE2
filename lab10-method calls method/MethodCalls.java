@@ -57,16 +57,25 @@ public class MethodCalls{
     }
     public static int join(int z, int w ){
         int output2=0;
-       
+        
             
-                if(w%100==w){
+               if(w%100==w){
                 output2=addDigit(z,w)*100+w;
                 }
-               else if(w%1000==w){
+               /*else if(w%1000==w){
                    output2=addDigit(z,w)*1000+w;
                }
                else if(w%10000==w){
                    output2=addDigit(z,w)*10000+w;
+               }
+               */
+               else{
+               int r=100;
+               while(w%r!=w){
+                   r=r*10;
+                   
+                    output2=addDigit(z,w)*r+w;
+               }
                }
         
        
