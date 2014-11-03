@@ -55,18 +55,18 @@ public static int checkRange(int z){//force the user to enter an int in the rang
 }
 return z;
 }
-public static String allBlocks(int m){
-    String a="";
+public static void allBlocks(int m){
+    
     
     for(int d=1;d<=m;d++){
         block(d);//call method block
         line(d);//call method line
         System.out.println();
     }
-    return a;
+    
 }
-public static int block(int d){
-    int b=0;
+public static void block(int d){
+    
 
         for(int e=1;e<=d;e++){
             for(int f=1;f<=(9-d);f++){
@@ -78,10 +78,10 @@ public static int block(int d){
             System.out.println();
         }
         
-    return b;
+    
 }
-public static String line(int d){
-    String c=" ";
+public static void line(int d){
+    
     
     for(int j=1;j<=9-d;j++){
         System.out.print(" ");
@@ -89,6 +89,6 @@ public static String line(int d){
     for(int k=1;k<=2*d-1;k++){
         System.out.print("-");
     }
-   return c; 
+    
 }//end of the line method
 }//end of main class
