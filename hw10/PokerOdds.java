@@ -1,19 +1,19 @@
 import java.util.Random;
 import java.util.Scanner;
 public class PokerOdds{
-  public static void main(String [] arg){
-    showHands();
-    simulateOdds();
+  public static void main(String [] arg){//main method
+    showHands();//call the method showHands
+    simulateOdds();//call the method simulateOdds
     
   }
   public static void showHands(){
-    Scanner scan=new Scanner(System.in);
-    int hands[]=new int[5];
+    Scanner scan=new Scanner(System.in);//input scanner
+    int hands[]=new int[5];//initiate the array that store five poker
     String answer=" ";
     do{
       int i=0;
     for(i=0;i<5;i++){
-      int random=(int)(Math.random()*52);
+      int random=(int)(Math.random()*52);//random to generate hands
       hands[i]=random;
     }
     String club=" ";
@@ -21,10 +21,10 @@ public class PokerOdds{
     String heart=" ";
     String spade=" ";
     
-    for(int j=0;j<5;j++){
-      if(hands[j]>=0&&hands[j]<13){
+    for(int j=0;j<5;j++){//sort the random hands
+      if(hands[j]>=0&&hands[j]<13){//situation one:club
         int ys=(hands[j])%13;
-        switch(ys){
+        switch(ys){//sub-situations club A-2
           case 0:
             club+="A ";
             break;
@@ -67,8 +67,8 @@ public class PokerOdds{
           
         }
       }
-      if(hands[j]>=13&&hands[j]<26){
-        int ys2=(hands[j])%13;
+      if(hands[j]>=13&&hands[j]<26){//situaltion 2: diamond
+        int ys2=(hands[j])%13;//sub-situation diamond A-2
         switch(ys2){
            case 0:
             diamond+="A ";
@@ -112,8 +112,8 @@ public class PokerOdds{
           
         }
       }
-      if(hands[j]>=26&&hands[j]<39){
-        int ys3=(hands[j])%13;
+      if(hands[j]>=26&&hands[j]<39){//situation 3: heart
+        int ys3=(hands[j])%13;//sub-situation heart A-2
         switch(ys3){
           case 0:
             heart+="A ";
@@ -157,8 +157,8 @@ public class PokerOdds{
           
         }
       }
-      if(hands[j]>=39&&hands[j]<52){
-        int ys4=(hands[j])%13;
+      if(hands[j]>=39&&hands[j]<52){//situation 4:spade
+        int ys4=(hands[j])%13;//sub-situation spade A-2
         switch(ys4){
           case 0:
             spade+="A ";
@@ -209,19 +209,16 @@ public class PokerOdds{
     System.out.println("Diamonds: "+diamond);
     System.out.println("Hearts: "+heart);
     System.out.println("Spades: "+spade);
-    System.out.print("Go again? Enter 'y' or 'Y', anything else to quit- ");
+    System.out.print("Go again? Enter 'y' or 'Y', anything else to quit- ");//input to go again
     answer=scan.next();
       
     }while(answer.equals("Y")||answer.equals("y"));
       
-  }
+  }// end of showHands method
   
   public static void simulateOdds(){
-    int odds[]=new int[5];
-    /*for(int z=0;z<5;z++){
-      int odd=(int)(Math.random()*13);
-      odds[z]=odd;
-    }*/
+    int odds[]=new int[5];//initiate a new array to store 5 cards
+   
     int temp=0;
     int temp2=0;
     int freq=0;
@@ -239,13 +236,13 @@ public class PokerOdds{
     int mf=0;
     int nf=0;
     
-    for(int all=1;all<=10000;all++){
+    for(int all=1;all<=10000;all++){//random 10000 times
       for(int z=0;z<5;z++){
-      int odd=(int)(Math.random()*13);
+      int odd=(int)(Math.random()*13);// generate random cards
       odds[z]=odd;
       }
     
-    for(int e=0;e<5;e++){
+    for(int e=0;e<5;e++){//get exactly one pair
       for(int f=(e+1);f<=(4-e);f++){
          temp=odds[f];
          temp2=odds[e];
@@ -316,8 +313,8 @@ public class PokerOdds{
     System.out.println("2     "+nf);
     System.out.println("-----------");
     int total=af+bf+cf+df+ef+hf+jf+kf+lf+mf+nf+gf+ff;
-    System.out.println("total not exactly one pair: "+(10000-total));
-  }
+    System.out.println("total not exactly one pair: "+(10000-total));//situation that not exactly one pair
+  }//end of simulateOdds method
   
   
-}
+}//end of class
