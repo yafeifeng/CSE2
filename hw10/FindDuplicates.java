@@ -1,6 +1,11 @@
+/////////////////////////////////////////////
+//Yafei Feng
+//cse2 hw10
+//find duplicates
+
 import java.util.Scanner;
 public class FindDuplicates{
-  public static void main(String [] arg){
+  public static void main(String [] arg){//beging of main method
     Scanner scan=new Scanner(System.in);
     int num[]=new int[10];
     String answer="";
@@ -34,7 +39,7 @@ public class FindDuplicates{
     }while(answer.equals("Y") || answer.equals("y"));
   }
 
-  public static String listArray(int num[]){
+  public static String listArray(int num[]){//list the array
     String out="{";
     for(int j=0;j<num.length;j++){
       if(j>0){
@@ -44,9 +49,9 @@ public class FindDuplicates{
     }
     out+="} ";
     return out;
-  }
+  }//end of listArray method
   
-  public static boolean hasDups(int num[]){
+  public static boolean hasDups(int num[]){//to check if the input has duplicate
       int i=0;
       int z=0;
       int temp=0;
@@ -63,9 +68,9 @@ public class FindDuplicates{
       }
       }
       return false;
-  }
+  }//end of hasDups method
  
-  public static boolean exactlyOneDup(int num[]){
+  public static boolean exactlyOneDup(int num[]){//to check if the input has exactly has one duplicate
       int e=0;
       int f=0;
       int g=0;
@@ -89,6 +94,6 @@ public class FindDuplicates{
       return false;
  
 
-}
-}
+}//end of exactlyOneDup method
+}//end of class
 
