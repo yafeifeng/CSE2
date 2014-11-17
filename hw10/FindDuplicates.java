@@ -82,7 +82,7 @@ public class FindDuplicates{
           temp4=num[f];
           while(temp2==temp4){
               g++;
-              break;
+              temp4++;
           }
           
       }
