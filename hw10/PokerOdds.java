@@ -217,8 +217,10 @@ public class PokerOdds{
   }// end of showHands method
   
   public static void simulateOdds(){
-    int odds[]=new int[5];//initiate a new array to store 5 cards
+    //int odds[]=new int[5];//initiate a new array to store 5 cards
+    
    
+    
     int temp=0;
     int temp2=0;
     int freq=0;
@@ -236,18 +238,62 @@ public class PokerOdds{
     int mf=0;
     int nf=0;
     
+    
     for(int all=1;all<=10000;all++){//random 10000 times
-      for(int z=0;z<5;z++){
-      int odd=(int)(Math.random()*13);// generate random cards
-      odds[z]=odd;
-      }
+    // for(int x=0;x<13;x++){
+    int odds[]={-1,-1,-1,-1,-1};
+    int deck[]={0,1,2,3,4,5,6,7,8,9,10,11,12};
+     for(int z=0;z<5;z++){
+     int decks=(int)(Math.random()*(13-z)); 
+     //System.out.println(decks);
+    int  temp3=deck[decks];
+    deck[decks]=deck[deck.length-1];
+    deck[deck.length-1]=temp3;
+    //System.out.println(deck[decks]+" "+deck[deck.length-1]);
+    int temp4=odds[z];
+    odds[z]=deck[deck.length-1];
+    deck[deck.length-1]=odds[z];
+    
+     }
+    //  deck[x]=decks;
+   // }
+      /*for(int z=0;z<5;z++){
+        int decks=(int)(Math.random()*(13-z)); 
+        int y=12;
+        //for(int q=1;q<=(z+1);q++){
+          //for(int y=12;y>=(12-z);y--){
+          if(deck[decks]!=-1){
+     odds[z]=deck[decks];
+     
+      //q=z+1;
+      //y=12-z;
+       int temp3=deck[decks];
+       deck[decks]=deck[y];
+       deck[y]=temp3;
+     
+       deck[y]=-1;
+         }
+         else{
+           decks=(int)(Math.random()*13);
+           
+         }
+      //}
+      }*/
+      
     
     for(int e=0;e<5;e++){//get exactly one pair
-      for(int f=(e+1);f<=(4-e);f++){
+    /* for(int j=e+1;j<5;j++){
+       if(odds[e]==odds[j]){
+         temp=odds[e];
+         freq++;
+       }
+       
+     }*/
+      for(int f=(e+1);f<5;f++){
          temp=odds[f];
-         temp2=odds[e];
+        temp2=odds[e];
         while(temp==temp2){
-          freq++;
+        freq++;
           temp2++;
           
         }

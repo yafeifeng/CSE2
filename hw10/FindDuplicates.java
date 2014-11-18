@@ -77,7 +77,7 @@ public class FindDuplicates{
       int temp2=0;
       int temp4=0;
       for(f=0;f<10;f++){
-      for(e=(f+1);e<=(9-f);e++){
+      for(e=(f+1);e<10;e++){
           temp2=num[e];
           temp4=num[f];
           while(temp2==temp4){
